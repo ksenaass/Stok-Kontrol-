@@ -10,13 +10,13 @@ def stok_kontrol_et():
         return
         
     try:
-        # Sitelerin engellememesi için tarayıcı gibi davranıyoruz
+        # Sitelerin engellememesi için tarayıcı gibi davranan kod bloğu
         istek = urllib.request.Request(
             url, 
             headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
         )
         
-        # Sayfaya bağlanıp içeriği okuyoruz
+        # Sayfaya bağlanıp içeriği okumak için
         with urllib.request.urlopen(istek) as cevap:
             sayfa_metni = cevap.read().decode('utf-8').lower()
             
